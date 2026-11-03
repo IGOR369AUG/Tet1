@@ -26,7 +26,18 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       sourcemap: false,
-      chunkSizeWarningLimit: 1200
+      chunkSizeWarningLimit: 1500,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom'],
+            'vendor-pdf': ['pdf-lib'],
+            'vendor-sheet': ['xlsx'],
+            'vendor-docx': ['mammoth'],
+            'vendor-canvas': ['html2canvas']
+          }
+        }
+      }
     }
   };
 });
