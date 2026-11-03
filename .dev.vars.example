@@ -1,0 +1,4 @@
+# Exemplo de variáveis de ambiente locais para Cloudflare Pages / Wrangler
+# Copie este arquivo para .dev.vars para executar testes locais se necessário
+# ATENÇÃO: Nunca comite arquivos .dev.vars com chaves ou segredos reais
+ENVIRONMENT=production
